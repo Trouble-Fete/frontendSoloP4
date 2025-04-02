@@ -5,6 +5,8 @@ import App from "./App.tsx";
 import Home from "./pages/home.tsx";
 import Regions from "./pages/Regions.tsx";
 import ReactDOM from "react-dom/client";
+import Weapons from "./pages/Weapons.tsx";
+import Rotations from "./pages/Rotations.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
 			{
 				path: "/regions",
 				element: <Regions />,
+			},
+			{
+				path: "/weapons",
+				element: <Weapons />,
+			},
+			{
+				path: "/rotations",
+				element: <Rotations />,
 			},
 		],
 	},

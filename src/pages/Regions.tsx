@@ -16,7 +16,7 @@ function Regions() {
 	}, []);
 	return (
 		<>
-			je suis dans Regions
+			Bienvenue dans les spots de Verdansk
 			{console.log(regions)}
 			<div>
 				{regions.map((region) => (

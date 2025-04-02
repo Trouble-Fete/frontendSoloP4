@@ -1,0 +1,21 @@
+.titleRotation {
+	width: 50rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.rotation {
+	width: 50rem;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.buttonRotation {
+	background-color: black;
+	color: white;
+	margin: 0 auto;
+	width: 10rem;
+	padding: 2rem;
+}
