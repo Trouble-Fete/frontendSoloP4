@@ -4,4 +4,12 @@
 	justify-content: space-around;
 	list-style: none;
 	font-size: 1.5rem;
+	background-color: black;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	width: 100vw;
+}
+a {
+	text-decoration: none;
+	color: white;
 }

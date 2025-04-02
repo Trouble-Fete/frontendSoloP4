@@ -1,44 +1,62 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import AddRotation from "../componants/AddRotation";
 import "./rotations.css";
 
-interface rotationsProps {
+interface RotationsProps {
 	rotation_id: number;
 	from_region_name: string;
 	to_region_name: string;
 	difficulty: number;
 }
+
 function Rotations() {
-	const [rotations, setRotations] = useState<rotationsProps[]>([]);
-	useEffect(() => {
+	const [rotations, setRotations] = useState<RotationsProps[]>([]);
+	const [showAddRotation, setShowAddRotation] = useState<boolean>(false);
+
+	const fetchRotations = useCallback(() => {
 		axios
 			.get("http://localhost:4242/api/rotations/")
-			.then((res) => setRotations(res.data));
+			.then((res) => setRotations(res.data))
+			.catch((err) => console.error(err));
 	}, []);
+
+	useEffect(() => {
+		fetchRotations();
+	}, [fetchRotations]);
+
 	return (
-		<>
-			Bienvenue dans les rotations, tu peux creer tes rotations et estimer la
-			difficulté de cette derniere:
+		<div className="containerGeneralRotation">
+			<h2>
+				Bienvenue dans les rotations, tu peux créer tes rotations et estimer la
+				difficulté de cette dernière:
+			</h2>
 			<div className="titleRotation">
 				<h2>Région de départ:</h2>
-				<p>à</p>
 				<h2>Région d'arrivée</h2>
 				<h2>Difficulté</h2>
 			</div>
 			<div>
-				{rotations.map((rotations) => (
-					<div className="rotation" key={rotations.rotation_id}>
-						<h2>{rotations.from_region_name}</h2>
-						<p>à</p>
-						<h2>{rotations.to_region_name}</h2>
-						<h3>{rotations.difficulty}</h3>
+				{rotations.map((rotation) => (
+					<div className="rotation" key={rotation.rotation_id}>
+						<h2>{rotation.from_region_name}</h2>
+						<h2>{rotation.to_region_name}</h2>
+						<h2>{rotation.difficulty}</h2>
 					</div>
 				))}
 			</div>
-			<button className="buttonRotation" type="button">
-				Ajouter une rotation
-			</button>
-		</>
+			<div className="containerButton">
+				<button
+					className="buttonRotation"
+					type="button"
+					onClick={() => setShowAddRotation(!showAddRotation)}
+				>
+					Ajouter une rotation
+				</button>
+			</div>
+			{showAddRotation && <AddRotation onRotationAdded={fetchRotations} />}
+		</div>
 	);
 }
+
 export default Rotations;

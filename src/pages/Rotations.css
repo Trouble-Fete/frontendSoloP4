@@ -1,21 +1,46 @@
-.titleRotation {
-	width: 50rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-.rotation {
-	width: 50rem;
-	cursor: pointer;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-.buttonRotation {
-	background-color: black;
+.containerGeneralRotation {
+	background-color: rgb(13, 109, 69);
 	color: white;
-	margin: 0 auto;
-	width: 10rem;
-	padding: 2rem;
+	.titleRotation {
+		margin: 0 auto;
+		width: 50rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		h2 {
+			width: 200px;
+			text-align: center;
+		}
+	}
+	.rotation {
+		margin: 0 auto;
+		width: 50rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		padding: 1rem 0;
+		border: 2px solid gray;
+		h2 {
+			width: 200px;
+			text-align: center;
+		}
+	}
+	.containerButton {
+		width: 100vw;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.buttonRotation {
+			background-color: black;
+			color: white;
+			margin: 0 auto;
+			width: 10rem;
+			padding: 1rem;
+			cursor: pointer;
+		}
+	}
 }
