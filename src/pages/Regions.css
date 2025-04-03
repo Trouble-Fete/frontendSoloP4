@@ -1,4 +1,8 @@
-.Picture {
-	width: 50rem;
-	cursor: pointer;
+.containerRegions {
+	background-color: black;
+	color: white;
+	.Picture {
+		width: 50rem;
+		cursor: pointer;
+	}
 }

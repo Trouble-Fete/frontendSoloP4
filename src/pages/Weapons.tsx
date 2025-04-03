@@ -16,9 +16,8 @@ function Weapons() {
 			.then((res) => setWeapons(res.data));
 	}, []);
 	return (
-		<>
+		<div className="containerWeapons">
 			Bienvenue dans les armes de Wz
-			{console.log(weapons)}
 			<div>
 				{weapons.map((weapon) => (
 					<div key={weapon.weapon_id}>
@@ -32,7 +31,7 @@ function Weapons() {
 					</div>
 				))}
 			</div>
-		</>
+		</div>
 	);
 }
 export default Weapons;

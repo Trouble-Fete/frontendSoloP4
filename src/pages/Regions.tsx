@@ -15,9 +15,8 @@ function Regions() {
 			.then((res) => setRegions(res.data));
 	}, []);
 	return (
-		<>
+		<div className="containerRegions">
 			Bienvenue dans les spots de Verdansk
-			{console.log(regions)}
 			<div>
 				{regions.map((region) => (
 					<div key={region.region_id}>
@@ -30,7 +29,7 @@ function Regions() {
 					</div>
 				))}
 			</div>
-		</>
+		</div>
 	);
 }
 export default Regions;

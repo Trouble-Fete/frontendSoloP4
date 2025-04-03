@@ -1,0 +1,13 @@
+.containerHome {
+	background-color: black;
+	color: white;
+	min-height: 90.2vh;
+	padding-top: 3rem;
+
+	.containerImageHome {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
