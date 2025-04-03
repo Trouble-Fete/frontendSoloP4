@@ -48,6 +48,19 @@ function Rotations() {
 		setEditingRotationId(null);
 	};
 
+	// Fonction pour supprimer une rotation
+	const handleDelete = async (id: number) => {
+		try {
+			await axios.delete(`http://localhost:4242/api/rotations/${id}`);
+			// Mise à jour de l'état local : suppression de la rotation supprimée
+			setRotations((prevRotations) =>
+				prevRotations.filter((rotation) => rotation.rotation_id !== id),
+			);
+		} catch (error) {
+			console.error("Erreur lors de la suppression de la rotation :", error);
+		}
+	};
+
 	return (
 		<div className="containerGeneralRotation">
 			<h2>
@@ -72,6 +85,13 @@ function Rotations() {
 							className="buttonEdit"
 						>
 							Modifier
+						</button>
+						<button
+							type="button"
+							onClick={() => handleDelete(rotation.rotation_id)}
+							className="buttonDelete"
+						>
+							Supprimer
 						</button>
 						{editingRotationId === rotation.rotation_id && (
 							<EditRotation

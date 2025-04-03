@@ -114,7 +114,7 @@ function AddRotation({ onRotationAdded }: AddRotationProps) {
 				/>
 			</label>
 			<br />
-			<button type="submit">Ajouter Rotation</button>
+			<button type="submit">Ajouter la Rotation</button>
 		</form>
 	);
 }
