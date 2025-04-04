@@ -1,0 +1,21 @@
+.formRotation {
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30rem;
+	margin: 0 auto;
+
+	.optionRegion {
+		font-size: 1rem;
+	}
+	.ajoutBoutton {
+		padding: 1rem;
+		color: white;
+		background-color: green;
+		box-shadow: 5px 5px rgba(0, 128, 0, 0.596);
+		border: none;
+		font-size: 1rem;
+	}
+}

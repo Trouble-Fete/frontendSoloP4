@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 
-import Home from "./pages/home.tsx";
+import Home from "./pages/Home.tsx";
 import Regions from "./pages/Regions.tsx";
 import ReactDOM from "react-dom/client";
 import Weapons from "./pages/Weapons.tsx";

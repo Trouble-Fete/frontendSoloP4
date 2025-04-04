@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "./AddRotation.css";
 
 interface Region {
 	region_id: number;
@@ -69,42 +70,57 @@ function AddRotation({ onRotationAdded }: AddRotationProps) {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<label>
-				Région de départ:
+		<form className="formRotation" onSubmit={handleSubmit}>
+			<label className="optionRegion">
+				<p className="optionRegion">Région de départ:</p>
 				<select
+					className="optionRegion"
 					name="from_region"
 					value={formData.from_region}
 					onChange={handleChange}
 				>
-					<option value="">Choisis ta région</option>
+					<option className="optionRegion" value="">
+						Choisis ta région
+					</option>
 					{regions.map((region) => (
-						<option key={region.region_id} value={region.region_id}>
+						<option
+							className="optionRegion"
+							key={region.region_id}
+							value={region.region_id}
+						>
 							{region.region_name}
 						</option>
 					))}
 				</select>
 			</label>
 			<br />
-			<label>
-				Région d'arrivée:
+			<label className="optionRegion">
+				<p className="optionRegion">Région d'arrivée:</p>
 				<select
+					className="optionRegion"
 					name="to_region"
 					value={formData.to_region}
 					onChange={handleChange}
 				>
-					<option value="">Choisis ta région</option>
+					<option className="optionRegion" value="">
+						Choisis ta région
+					</option>
 					{regions.map((region) => (
-						<option key={region.region_id} value={region.region_id}>
+						<option
+							className="optionRegion"
+							key={region.region_id}
+							value={region.region_id}
+						>
 							{region.region_name}
 						</option>
 					))}
 				</select>
 			</label>
 			<br />
-			<label>
-				Difficulté (1-5):
+			<label className="optionRegion">
+				<p className="optionRegion">Difficulté (1-5):</p>
 				<input
+					className="optionRegion"
 					name="difficulty"
 					type="number"
 					value={formData.difficulty}
@@ -114,7 +130,9 @@ function AddRotation({ onRotationAdded }: AddRotationProps) {
 				/>
 			</label>
 			<br />
-			<button type="submit">Ajouter la Rotation</button>
+			<button className="ajoutBoutton" type="submit">
+				Ajouter la Rotation
+			</button>
 		</form>
 	);
 }

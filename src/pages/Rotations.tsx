@@ -63,7 +63,7 @@ function Rotations() {
 
 	return (
 		<div className="containerGeneralRotation">
-			<h2>
+			<h2 className="titlePageRotation">
 				Bienvenue dans les rotations, tu peux créer tes rotations et estimer la
 				difficulté de cette dernière :
 			</h2>

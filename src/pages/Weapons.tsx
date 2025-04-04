@@ -17,17 +17,17 @@ function Weapons() {
 	}, []);
 	return (
 		<div className="containerWeapons">
-			Bienvenue dans les armes de Wz
+			<h2>Bienvenue dans les armes de Wz</h2>
 			<div>
 				{weapons.map((weapon) => (
 					<div key={weapon.weapon_id}>
-						<h2>{weapon.weapon_name}</h2>
+						<h2 className="weaponName">{weapon.weapon_name}</h2>
 						<img
 							className="Picture"
 							src={weapon.weapon_image}
 							alt={weapon.weapon_name}
 						/>
-						<h3>{weapon.weapon_type}</h3>
+						<h3 className="weaponType">type: {weapon.weapon_type}</h3>
 					</div>
 				))}
 			</div>

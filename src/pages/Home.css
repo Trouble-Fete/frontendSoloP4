@@ -1,8 +1,15 @@
 .containerHome {
-	background-color: black;
+	background-image: url(https://www.dexerto.fr/cdn-image/wp-content/uploads/sites/2/2024/01/03/verdansk-retour-warzone.jpg?width=1200&quality=75&format=auto);
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
-	min-height: 90.2vh;
 	padding-top: 3rem;
+	height: calc(100vh - 11rem);
+
+	h1 {
+		text-align: center;
+		margin: 2rem 0;
+	}
 
 	.containerImageHome {
 		display: flex;

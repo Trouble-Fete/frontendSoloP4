@@ -16,11 +16,11 @@ function Regions() {
 	}, []);
 	return (
 		<div className="containerRegions">
-			Bienvenue dans les spots de Verdansk
+			<h2>Bienvenue dans les spots de Verdansk</h2>
 			<div>
 				{regions.map((region) => (
 					<div key={region.region_id}>
-						<h2>{region.region_name}</h2>
+						<h2 className="regionNAme">{region.region_name}</h2>
 						<img
 							className="Picture"
 							src={region.region_image}
